@@ -8,6 +8,15 @@ hero and for international trade-show screens. Graphite black, cold white and
 glacier blue; no leaf, no recycle arrow, no green — the sustainability story is
 told through material behaviour, not eco clichés.
 
+## Live preview (no download)
+
+- **https://yisamaco.github.io/zea-brand-motion/** — the running film, online
+- Source: **https://github.com/yisamaco/zea-brand-motion**
+
+Scrub straight to a beat:
+`?t=2.8&clean=1` (fibres dissolving) · `?t=4.6&clean=1` (the loop) ·
+`?t=8.9&clean=1` (PET flakes) · `?t=14.6` (final lockup)
+
 ---
 
 ## 1. Run it

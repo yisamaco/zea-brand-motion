@@ -1,0 +1,23 @@
+{
+  "name": "zea-clean-blue-motion",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "ZEA · 清蓝 — 15s Three.js brand animation (ZERO. ENDLESS. AGAIN.)",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.170.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4"
+  }
+}

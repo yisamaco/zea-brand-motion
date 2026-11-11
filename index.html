@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <title>ZEA · 清蓝 — ZERO. ENDLESS. AGAIN.</title>
+    <meta
+      name="description"
+      content="ZEA · 清蓝 品牌动画 V1：零为始 · 循无界 · 塑新生。ZERO. ENDLESS. AGAIN. A Future Without Waste."
+    />
+    <meta name="theme-color" content="#08090b" />
+    <link rel="preload" as="style" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <canvas id="stage" class="stage"></canvas>
+      <div class="vignette" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+
+      <header class="meta">
+        <div class="meta__left">
+          <span class="meta__brand">ZEA<span class="meta__dot">·</span>清蓝</span>
+          <span class="meta__rule"></span>
+          <span class="meta__label">BRAND MOTION / V1</span>
+        </div>
+        <div class="meta__right">
+          <span class="meta__label meta__label--dim">GRAPHITE / GLACIER</span>
+        </div>
+      </header>
+
+      <section id="labels" class="labels" aria-live="polite">
+        <article class="scene-label" data-scene="0">
+          <span class="scene-label__idx">01 / 04</span>
+          <h2 class="scene-label__word">ZERO.</h2>
+          <span class="scene-label__cn">零为始</span>
+        </article>
+        <article class="scene-label" data-scene="1">
+          <span class="scene-label__idx">02 / 04</span>
+          <h2 class="scene-label__word">ENDLESS.</h2>
+          <span class="scene-label__cn">循无界</span>
+        </article>
+        <article class="scene-label" data-scene="2">
+          <span class="scene-label__idx">03 / 04</span>
+          <h2 class="scene-label__word">AGAIN.</h2>
+          <span class="scene-label__cn">塑新生</span>
+        </article>
+      </section>
+
+      <section id="lockup" class="lockup">
+        <span class="lockup__rule"></span>
+        <h1 class="lockup__brand">ZEA<span class="lockup__dot">·</span>清蓝</h1>
+        <p class="lockup__cn">零为始&nbsp;·&nbsp;循无界&nbsp;·&nbsp;塑新生</p>
+        <p class="lockup__en">ZERO. ENDLESS. AGAIN.</p>
+        <p class="lockup__vision">A Future Without Waste.</p>
+      </section>
+
+      <footer id="hud" class="hud">
+        <div class="hud__bar">
+          <button id="btn-play" class="hud__btn hud__btn--play" type="button" aria-label="播放或暂停">
+            <svg class="ico ico--play" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M5.6 3.2 12.3 8 5.6 12.8Z" />
+            </svg>
+            <svg class="ico ico--pause" viewBox="0 0 16 16" aria-hidden="true">
+              <rect x="5" y="3.4" width="1.9" height="9.2" rx="0.4" />
+              <rect x="9.1" y="3.4" width="1.9" height="9.2" rx="0.4" />
+            </svg>
+          </button>
+
+          <div class="hud__time">
+            <span id="t-now">00.00</span>
+            <span class="hud__time-sep">/</span>
+            <span class="hud__time-total">15.00</span>
+          </div>
+
+          <div class="hud__scrub">
+            <div class="hud__ticks" id="ticks" aria-hidden="true"></div>
+            <input
+              id="scrub"
+              class="scrub"
+              type="range"
+              min="0"
+              max="15"
+              step="0.001"
+              value="0"
+              aria-label="播放进度"
+            />
+          </div>
+
+          <nav class="hud__scenes" id="scene-nav" aria-label="分镜跳转">
+            <button type="button" data-jump="0"><i>01</i>ZERO</button>
+            <button type="button" data-jump="1"><i>02</i>ENDLESS</button>
+            <button type="button" data-jump="2"><i>03</i>AGAIN</button>
+            <button type="button" data-jump="3"><i>04</i>ZEA</button>
+          </nav>
+
+          <button id="btn-loop" class="hud__btn hud__btn--text is-on" type="button" aria-pressed="true">
+            LOOP
+          </button>
+
+          <button id="btn-full" class="hud__btn hud__btn--icon" type="button" aria-label="全屏播放">
+            <svg class="ico" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M3 6V3h3M10 3h3v3M13 10v3h-3M6 13H3v-3" fill="none" />
+            </svg>
+          </button>
+        </div>
+      </footer>
+
+      <p id="hint" class="hint">SPACE 播放/暂停&nbsp;&nbsp;·&nbsp;&nbsp;← → 微调&nbsp;&nbsp;·&nbsp;&nbsp;1–4 分镜&nbsp;&nbsp;·&nbsp;&nbsp;F 全屏</p>
+
+      <div id="fallback" class="fallback" hidden>
+        <p class="fallback__title">ZEA · 清蓝</p>
+        <p class="fallback__body">
+          当前浏览器未启用 WebGL2，无法播放 3D 品牌动画。<br />请使用 Chrome / Safari / Edge 最新版本打开。
+        </p>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
